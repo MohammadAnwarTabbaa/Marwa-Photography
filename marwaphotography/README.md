@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+Project Title: Marwa Photography Website
+ Codi Tech
+June 28, 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Client Contact Details
 
-## Available Scripts
 
-In the project directory, you can run:
+Ms. Marwa Hodeib
+marwahodeib31@gmail.com
+[Phone number]
 
-### `npm start`
+2. Budget & Timing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Website’s budget is estimated at $490.00.
+The website is due for release on July 25, 2021.
 
-### `npm test`
+3. Project Outline
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Ms. Hodeib would like a website to promote her photography services, and she desires to share examples of her previous photographs.
+Her main audience is young people who would need her services mainly for journalism and media purposes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Websites the client likes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://gardencreekvineyards.com/
 
-### `npm run eject`
+5. Website architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Do we have a site map?
+No
+Number of pages:
+6
+What features should the website have?
+[✓] Easy–to–update for non-technical people
+[  ] SEO-friendly
+[  ] Ecommerce
+[  ] Newsletter
+[  ] Members section
+[  ] Email marketing
+[  ] Mobile-ready
+[ ✓] Photo and media galleries
+[  ] Feedback & contact forms
+[  ] Surveys
+[  ] Blog
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Website design and style 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+[ ✓ ] Stylish 
+[  ] Humble 
+[ ✓ ] Helpful 
+[ ✓ ] Prestigious 
+[ ✓ ] Simple/Clean and Slick
+[ ✓ ] Approachable 
+[  ] High-tech 
+[  ] Corporate 
+[ ✓ ] Modern 
+[  ] Authoritative 
+[  ] Funky 
+[  ] Caring 
+[  ] Natural/Organic 
+[  ] Credible/Expert 
+[  ] Playful 
+[ ✓ ] Elegant 
+[ ✓ ] Sophisticated 
+[  ] Fresh 
+[ ✓ ] Artistic
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. Search engines keywords
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Photographer
+Photography services
+Marwa
+Hodeib
+Photos
+Art pics
+Marwa Photography
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+9. Content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+What types of content will be on your website?
+Text and Photos
+What content is now produced?
+Above 150 photos
+Do you need assistance with producing new content?
+No
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+10. Competition and Niche
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+List your competitors’ websites and other important websites in your market/niche?
+N/A
+What are they doing well?
+N/A
+What are they doing badly?
+N/A
+
+
+11. Any Other Comments?
+
+
+-The main feature required is the users’ ability to view photos in full resolution by clicking on the images in the categories.
+-The only method of contacting Ms. Hodeib is by email and that is also how orders and inquiries are going to occur.
