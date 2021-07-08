@@ -3,11 +3,11 @@ import "./Welcome.css";
 
 const welcome= () =>{
     return (
-    <body>
+    <div className="background">
         <div className="container">
             <a className="owner" href="#">Marwa Hodeib</a>
         </div>
-    </body>
+    </div>
     )}
 
 export default welcome;
