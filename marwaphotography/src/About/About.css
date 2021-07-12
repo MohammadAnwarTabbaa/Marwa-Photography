@@ -30,15 +30,23 @@ article{
     margin-bottom: 7vh;
 }
 @media (max-width:500px) {
-    .title{
-        font-size: 8vw;
-    }
-    article{
-        font-size: 4vw;
-        padding-right: 0px;
+    .about-wrapper{
+        flex-direction: column;
+        padding: 10%;
     }
     .about-img{
-        width: 40vw;
-    height: 50vh;
+        width: 70%;
+        height: 70%;
+        margin-top: 20%;
+        margin-left: 15%;
+    }
+    article{
+        padding: 0px;
+        text-align: center;
+    }
+    .title{
+        text-align: center;
+        font-size: 200%;
+        margin-top: 0px;
     }
 }
