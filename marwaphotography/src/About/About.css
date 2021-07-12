@@ -13,7 +13,7 @@
 
     color: white;
 }
-article{
+.about-text{
     padding-right: 45%;
     text-align:left;
     font-size: 17px;
@@ -40,7 +40,7 @@ article{
         margin-top: 20%;
         margin-left: 15%;
     }
-    article{
+    .about-text{
         padding: 0px;
         text-align: center;
     }
