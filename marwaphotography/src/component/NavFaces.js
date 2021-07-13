@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 function NavFaces(props) {
   return (
-    <Link to={"/Main"} className="nav navFaces" onClick={props.Faces}>
+    <Link
+      to={"/Faces"}
+      className={props.isResponsive ? " nav nav-show navUrban" : "nav navFaces"}
+      onClick={props.Faces}
+      defaultValue=""
+    >
       Faces In Objects
     </Link>
   );

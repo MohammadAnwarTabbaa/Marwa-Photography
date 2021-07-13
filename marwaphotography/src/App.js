@@ -9,14 +9,19 @@ import { withRouter, Switch, Route } from "react-router-dom";
 import Main from "./Pages/Main";
 import AboutUS from "./Pages/AboutUS";
 import ContactUs from "./Pages/ContactUs";
+import Faces from "./Pages/Faces";
+import Miscellaneous from "./Pages/Miscellaneous";
 
 export class App extends Component {
   state = {
-    images: imagesList.listA,
+    Facesimages: [],
+    Miscimages: [],
+    images: null,
     selectedImage: null,
     imageId: null,
     imageKey: null,
     welcome: true,
+    modelImages: [],
   };
   ShowScrollbar() {
     var style = document.createElement("style");
@@ -29,15 +34,16 @@ export class App extends Component {
     this.setState({ imageId: event.target.id });
   };
   Faces = async (e) => {
-    await this.setState({ images: imagesList.listA });
+    await this.setState({ Facesimages: imagesList.listA });
+    this.setState({ modelImages: this.state.Facesimages });
   };
   Misc = async (e) => {
-    await this.setState({ images: imagesList.listB });
-    console.log(this.state.images);
+    await this.setState({ Miscimages: imagesList.listB });
+    this.setState({ modelImages: this.state.Miscimages });
   };
   Urban = async (e) => {
     await this.setState({ images: imagesList.listC });
-    console.log(this.state.images);
+    this.setState({ modelImages: this.state.images });
   };
   handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
@@ -46,15 +52,19 @@ export class App extends Component {
     }
   };
 
-  componentWillMount() {
+  componentDidMount() {
     // this.setState({ images: imagesList.listA });
+    if (this.state.images == null) {
+      this.setState({ images: imagesList.listC });
+      this.setState({ modelImages: this.state.images });
+    }
   }
   render() {
     let model = null;
     if (this.state.selectedImage) {
       model = (
         <Modal
-          list={this.state.images}
+          list={this.state.modelImages}
           selectedImage={this.state.selectedImage}
           imageId={this.state.imageId}
           handleClick={this.handleClick}
@@ -91,7 +101,6 @@ export class App extends Component {
                 <Main
                   select={this.select}
                   images={this.state.images}
-                  Faces={this.Faces}
                   Misc={this.Misc}
                   Urban={this.Urban}
                   {...props}
@@ -101,6 +110,36 @@ export class App extends Component {
           ) : (
             ""
           )}
+          {/* {this.state.Facesimages ? ( */}
+          <Route
+            path="/Faces"
+            render={(props) => (
+              <Faces
+                select={this.select}
+                images={this.state.Facesimages}
+                Faces={this.Faces}
+                {...props}
+              />
+            )}
+          />
+          {/* ) : (
+            ""
+          )} */}
+          <Route
+            path="/Misc"
+            render={(props) => (
+              <Miscellaneous
+                select={this.select}
+                images={this.state.Miscimages}
+                Misc={this.Misc}
+                {...props}
+              />
+            )}
+          />
+          {/* ) : (
+            ""
+          )} */}
+
           {/* <Route path="/Main" component={Main} /> */}
           <Route path="/About" component={AboutUS} />
           <Route path="/ContactUs" component={ContactUs} />

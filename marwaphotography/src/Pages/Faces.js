@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
-import Image from "../Image/Image";
+import React, { useEffect, useState } from "react";
 import Nav from "../component/Nav";
-function Miscellaneous(props) {
-  const [MiscImage, setMiscImage] = useState(null);
+import Image from "../Image/Image";
+function Faces(props) {
+  const [facesImage, setFacesImage] = useState(null);
+
   useEffect(() => {
-    setMiscImage(props.Misc);
+    setFacesImage(props.Faces);
   }, []);
+
   return (
     <div>
       <Nav Misc={props.Misc} Urban={props.Urban} />
-      {MiscImage ? (
+      {facesImage ? (
         <Image select={props.select} images={props.images} {...props} />
       ) : (
         ""
@@ -18,4 +20,4 @@ function Miscellaneous(props) {
   );
 }
 
-export default Miscellaneous;
+export default Faces;

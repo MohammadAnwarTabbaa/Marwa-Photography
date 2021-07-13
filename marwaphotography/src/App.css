@@ -91,19 +91,49 @@ body {
   color: rgb(242, 213, 159);
 }
 
+.toggle-button {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+.toggle-button:hover {
+  color: rgb(242, 213, 159);
+}
+
 @media only screen and (max-width: 600px) {
   .navMain {
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
-    padding-top: 10%;
-
+    padding-top: 2.4rem;
+    margin-right: 1.2rem;
     align-items: center;
   }
   .nav {
     padding-bottom: 2%;
     text-decoration: none;
     color: white;
+    align-self: flex-end;
+    display: none;
   }
+  .toggle-button {
+    display: flex;
+  }
+  .nav-show {
+    display: flex;
+  }
+
   .backdrop {
     overflow-y: scroll;
   }

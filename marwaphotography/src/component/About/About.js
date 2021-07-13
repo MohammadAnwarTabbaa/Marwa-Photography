@@ -6,7 +6,7 @@ const about = () => {
     <div className="about-body">
       <div className="about-wrapper">
         <div className="left-side">
-          <h1 className="title">Biography</h1>
+          <h1 className="about-title">Biography</h1>
           <article class="about-text">
             I'm a paragraph. Click here to add your own text and edit me. It’s
             easy. Just click “Edit Text” or double click me to add your own

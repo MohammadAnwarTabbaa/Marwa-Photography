@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
-function NavContact() {
+function NavContact(props) {
   return (
-    <Link to="/ContactUs" className="nav navContact">
+    <Link
+      to="/ContactUs"
+      className={
+        props.isResponsive ? " nav nav-show navUrban" : "nav navContact"
+      }
+    >
       Contact
     </Link>
   );
