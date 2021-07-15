@@ -4,7 +4,7 @@ function NavUrban(props) {
   return (
     <Link
       onClick={props.Urban}
-      to={"/Main"}
+      to={"/Urban"}
       className={props.isResponsive ? " nav nav-show navUrban" : "nav navUrban"}
     >
       Urban
