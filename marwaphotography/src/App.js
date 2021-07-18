@@ -11,12 +11,15 @@ import AboutUS from "./Pages/AboutUS";
 import ContactUs from "./Pages/ContactUs";
 import Faces from "./Pages/Faces";
 import Miscellaneous from "./Pages/Miscellaneous";
+import Urban from "./Pages/Urban";
+import AdminPanel from "./Pages/AdminPanel";
+import AdminLogin from "./component/AdminLogin/AdminLogin";
 
 export class App extends Component {
   state = {
     Facesimages: [],
     Miscimages: [],
-    images: null,
+    images: [],
     selectedImage: null,
     imageId: null,
     imageKey: null,
@@ -41,6 +44,10 @@ export class App extends Component {
     await this.setState({ Miscimages: imagesList.listB });
     this.setState({ modelImages: this.state.Miscimages });
   };
+  // Urban = async (e) => {
+  //   await this.setState({ images: imagesList.listC });
+  //   this.setState({ modelImages: this.state.images });
+  // };
   Urban = async (e) => {
     await this.setState({ images: imagesList.listC });
     this.setState({ modelImages: this.state.images });
@@ -54,10 +61,10 @@ export class App extends Component {
 
   componentDidMount() {
     // this.setState({ images: imagesList.listA });
-    if (this.state.images == null) {
-      this.setState({ images: imagesList.listC });
-      this.setState({ modelImages: this.state.images });
-    }
+    // if (this.state.images == null) {
+    //   this.setState({ images: imagesList.listC });
+    //   // this.setState({ modelImages: this.state.images });
+    // }
   }
   render() {
     let model = null;
@@ -96,9 +103,9 @@ export class App extends Component {
           />
           {this.state.images ? (
             <Route
-              path="/Main"
+              path="/Urban"
               render={(props) => (
-                <Main
+                <Urban
                   select={this.select}
                   images={this.state.images}
                   Misc={this.Misc}
@@ -143,6 +150,10 @@ export class App extends Component {
           {/* <Route path="/Main" component={Main} /> */}
           <Route path="/About" component={AboutUS} />
           <Route path="/ContactUs" component={ContactUs} />
+          <Route path="/AdminPanel" component={AdminPanel} />
+          <Route path="/AdminLogin" component={AdminLogin} />
+
+          
           {/* <Image select={this.state.selectedImage} images={this.state.images} />
         {model} */}
           {/* <Welcome /> */}

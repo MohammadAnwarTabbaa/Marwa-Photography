@@ -16,6 +16,8 @@ const Modal = (props) => {
       });
     }
   }
+
+
   function HideScrollbar(hidden) {
     var style = document.createElement("style");
     style.innerHTML = `body{overflow-y:${hidden};}`;
@@ -30,6 +32,9 @@ const Modal = (props) => {
         HideScrollbar("hidden");
         getImage();
       }}
+
+
+
       // onLoad={props.HideScrollbar}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

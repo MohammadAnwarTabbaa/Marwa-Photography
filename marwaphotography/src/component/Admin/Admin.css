@@ -1,0 +1,77 @@
+* {
+    background-color:transparent;
+}
+
+table, th, td  {
+
+    color: gray;
+    border: 0.5px solid gray;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+table {
+    margin: 10% 10% 1% 10%;
+    width: 80%;
+  
+    
+}
+
+i{
+    color: black;
+    width: 20%;
+}
+
+img {
+    width:4vw;
+    margin-top:3px;
+   
+}
+
+textarea{
+    background-color: white;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: -8%;
+   
+    margin-top: 5%;
+    
+}
+
+button {
+    border-radius: 10px;
+    background-color: white;
+    color: gray;
+    /* border: none; */
+    width: 30%;
+}
+
+.bkg {
+    width: 100%;
+    height: 100%;
+   position: fixed;
+    z-index: -2;
+
+}
+
+.allTables {
+    padding-top: 10px;
+    
+}
+
+.AdminAddBtn {
+    
+    margin-left: 79%;
+    width: 100px;
+    padding-bottom: 1px;
+}
+
+
+@media (max-width: 600px) {
+    .allTables {
+    overflow-x:auto;
+    }
+}
