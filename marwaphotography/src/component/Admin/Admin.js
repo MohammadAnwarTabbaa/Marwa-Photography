@@ -4,7 +4,7 @@ import img from "./img.png";
 
 function Admin() {
   return (
-    <div>
+    <div className="all">
       <table>
         <tr>
           <th>Id</th>
@@ -39,7 +39,7 @@ function Admin() {
         <tr>
           <td> #</td>
           <td>
-            <img src={img}></img>
+            <img className="imgThumb" src={img}></img>
           </td>
           <td>
             {" "}
@@ -60,7 +60,7 @@ function Admin() {
         <tr>
           <td> #</td>
           <td>
-            <img src={img}></img>
+            <img className="imgThumb" src={img}></img>
           </td>
           <td>
             {" "}

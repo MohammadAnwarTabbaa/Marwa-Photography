@@ -1,17 +1,13 @@
-* {
+.allLogin {
   margin: 0;
   padding: 0;
-}
-
-body {
   background: transparent;
-}
-
-body,
-input,
-button {
   font-family: "Source Sans Pro", sans-serif;
 }
+
+
+
+
 
 .login {
   padding: 10px;
@@ -33,22 +29,22 @@ button {
   text-shadow: 1px 1px 3px;
 }
 
-form {
-  span {
-    background: transparent;
+form span{
+   
+    background:transparent ;
     min-width: 53px;
     border: none;
   }
 
-  input.form-control {
+  form input.form-control {
     padding: 10px;
     font-size: 1.6em;
     width: 100%;
     background: transparent;
   }
-}
 
-button {
+
+.float {
   margin-top: 20px;
 
   border: none;

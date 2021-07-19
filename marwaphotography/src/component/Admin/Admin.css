@@ -1,4 +1,4 @@
-* {
+.all {
     background-color:transparent;
 }
 
@@ -22,7 +22,7 @@ i{
     width: 20%;
 }
 
-img {
+.imgThumb {
     width:4vw;
     margin-top:3px;
    
@@ -41,7 +41,7 @@ h2{
     
 }
 
-button {
+.AdminAddBtn, .AdminDeleteBtn, .AdminUpdateBtn {
     border-radius: 10px;
     background-color: white;
     color: gray;
