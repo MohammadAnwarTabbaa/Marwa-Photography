@@ -10,7 +10,12 @@ function Miscellaneous(props) {
     <div>
       <Nav Misc={props.Misc} Urban={props.Urban} />
       {MiscImage ? (
-        <Image select={props.select} images={props.images} {...props} />
+        <Image
+          cat={props.cat}
+          select={props.select}
+          images={props.images}
+          {...props}
+        />
       ) : (
         ""
       )}

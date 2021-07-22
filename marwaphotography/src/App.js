@@ -19,7 +19,7 @@ export class App extends Component {
     Miscimages: [],
     images: [],
     selectedImage: null,
-    imageId: null,
+    imageId: "",
     imageKey: null,
     welcome: true,
     modelImages: [],
@@ -30,25 +30,32 @@ export class App extends Component {
     document.head.appendChild(style);
   }
 
-  select = (event) => {
-    this.setState({ selectedImage: event.target.src });
-    this.setState({ imageId: event.target.id });
+  select = async (event) => {
+    await this.setState({ selectedImage: event.target.src });
+    await this.setState({ imageId: event.target.id });
   };
   Faces = async (e) => {
-    await this.setState({ Facesimages: imagesList.listA });
-    this.setState({ modelImages: this.state.Facesimages });
+    const response = await fetch("http://localhost:3000/image/get");
+    const result = await response.json();
+    // console.log(result);
+    await this.setState({ Facesimages: result });
+    await this.setState({ modelImages: result });
   };
   Misc = async (e) => {
-    await this.setState({ Miscimages: imagesList.listB });
-    this.setState({ modelImages: this.state.Miscimages });
+    const response = await fetch("http://localhost:3000/misce/get");
+    const result = await response.json();
+    await this.setState({ Miscimages: result, modelImages: result });
+    // await this.setState({ modelImages: result });
   };
   // Urban = async (e) => {
   //   await this.setState({ images: imagesList.listC });
   //   this.setState({ modelImages: this.state.images });
   // };
   Urban = async (e) => {
-    await this.setState({ images: imagesList.listC });
-    this.setState({ modelImages: this.state.images });
+    const response = await fetch("http://localhost:3000/urban/get");
+    const result = await response.json();
+    await this.setState({ images: result, modelImages: result });
+    // this.setState({ modelImages: this.state.images });
   };
   handleClick = (e) => {
     if (e.target.classList.contains("backdrop")) {
@@ -108,6 +115,7 @@ export class App extends Component {
                   images={this.state.images}
                   Misc={this.Misc}
                   Urban={this.Urban}
+                  cat="Urban"
                   {...props}
                 />
               )}
@@ -123,6 +131,7 @@ export class App extends Component {
                 select={this.select}
                 images={this.state.Facesimages}
                 Faces={this.Faces}
+                cat="Faces"
                 {...props}
               />
             )}
@@ -136,6 +145,7 @@ export class App extends Component {
               <Miscellaneous
                 select={this.select}
                 images={this.state.Miscimages}
+                cat="Misce"
                 Misc={this.Misc}
                 {...props}
               />
