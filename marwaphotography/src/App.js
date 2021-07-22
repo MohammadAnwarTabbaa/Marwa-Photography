@@ -12,7 +12,8 @@ import ContactUs from "./Pages/ContactUs";
 import Faces from "./Pages/Faces";
 import Miscellaneous from "./Pages/Miscellaneous";
 import Urban from "./Pages/Urban";
-
+import AdminPanel from "./Pages/AdminPanel";
+import AdminLogin from "./component/AdminLogin/AdminLogin";
 
 export class App extends Component {
   state = {
@@ -162,7 +163,6 @@ export class App extends Component {
           <Route path="/AdminPanel" component={AdminPanel} />
           <Route path="/AdminLogin" component={AdminLogin} />
 
-          
           {/* <Image select={this.state.selectedImage} images={this.state.images} />
         {model} */}
           {/* <Welcome /> */}
