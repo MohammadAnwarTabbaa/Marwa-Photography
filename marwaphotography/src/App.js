@@ -13,6 +13,7 @@ import Faces from "./Pages/Faces";
 import Miscellaneous from "./Pages/Miscellaneous";
 import Urban from "./Pages/Urban";
 
+
 export class App extends Component {
   state = {
     Facesimages: [],
@@ -158,6 +159,10 @@ export class App extends Component {
           {/* <Route path="/Main" component={Main} /> */}
           <Route path="/About" component={AboutUS} />
           <Route path="/ContactUs" component={ContactUs} />
+          <Route path="/AdminPanel" component={AdminPanel} />
+          <Route path="/AdminLogin" component={AdminLogin} />
+
+          
           {/* <Image select={this.state.selectedImage} images={this.state.images} />
         {model} */}
           {/* <Welcome /> */}

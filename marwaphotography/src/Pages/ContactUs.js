@@ -1,12 +1,14 @@
 import React from "react";
-import Contact from "../component/Contact";
+import Nav from "../component/Nav";
+import Contact from "../component/Contact/ContactUs";
 
-function ContactUs() {
+function AboutUS() {
   return (
     <div>
+      <Nav />
       <Contact />
     </div>
   );
 }
 
-export default ContactUs;
+export default AboutUS;
