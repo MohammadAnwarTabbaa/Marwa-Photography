@@ -12,7 +12,12 @@ function Faces(props) {
     <div>
       <Nav Misc={props.Misc} Urban={props.Urban} />
       {facesImage ? (
-        <Image select={props.select} images={props.images} {...props} />
+        <Image
+          cat={props.cat}
+          select={props.select}
+          images={props.images}
+          {...props}
+        />
       ) : (
         ""
       )}

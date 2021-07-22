@@ -4,14 +4,14 @@ const Modal = (props) => {
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const [srcc, setSrc] = useState();
+  console.log(props.list);
   function getImage() {
     {
       props.list.map((task) => {
-        if (task.id == props.imageId) {
+        if (task._id == props.imageId) {
           setTitle(task.title);
           setDescription(task.description);
           setSrc(task.src);
-          console.log(task.src);
         }
       });
     }
