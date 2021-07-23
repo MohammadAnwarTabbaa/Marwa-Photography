@@ -11,15 +11,18 @@ body {
 }
 .bigImage {
   height: 50%;
-  width: 100%;
+  width: auto;
   object-fit: cover;
+  border: 1px white solid;
 }
 .img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.5s; /* Animation */
+  /* border: red 2px solid; */
 }
+
 .img:hover {
   transform: scale(
     1.1
@@ -27,14 +30,15 @@ body {
 }
 .im {
   width: 40em;
-  height: 40em;
+  height: 30em;
   /* border: 10px red solid; */
   /* border-radius: 1em; */
   overflow: hidden;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(24, 23, 23, 0.542) 0px 30px 60px -30px,
-    rgba(63, 64, 65, 0.35) 0px -2px 6px 0px inset;
+    rgba(63, 64, 65, 0.35) 0px -2px 6px 0px inset; */
+  /* border: white 2px solid; */
 }
 .image-grid {
   display: flex;
@@ -63,8 +67,6 @@ body {
   overflow-y: auto;
 }
 
-
-
 /* Only enable if we fixed the closing of Modal   */
 /* .backdrop::-webkit-scrollbar { 
   display: none;   
@@ -73,12 +75,11 @@ body {
 .backdrop img {
   display: block;
   min-width: 80%;
-  min-height:80%;
+  min-height: 80%;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
   /* border: 3px solid white; */
   object-fit: contain;
-  
 }
 .bigDiv {
   background-color: tomato;
@@ -124,10 +125,6 @@ body {
   color: rgb(242, 213, 159);
 }
 
-
-
-
-
 .title h1,
 .description p {
   color: white;
@@ -145,14 +142,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
 
 @media (max-width: 600px) {
   .navMain {
@@ -185,6 +174,3 @@ body {
     margin: 1rem;
   }
 }
-
-
-

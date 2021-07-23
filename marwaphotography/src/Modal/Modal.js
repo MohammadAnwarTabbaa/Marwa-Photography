@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import "./Modal.css";
 const Modal = (props) => {
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
@@ -17,7 +18,6 @@ const Modal = (props) => {
     }
   }
 
-
   function HideScrollbar(hidden) {
     var style = document.createElement("style");
     style.innerHTML = `body{overflow-y:${hidden};}`;
@@ -27,18 +27,17 @@ const Modal = (props) => {
   return (
     <motion.div
       className="backdrop"
-      onClick={props.handleClick}
       onLoad={() => {
         HideScrollbar("hidden");
         getImage();
       }}
-
-
-
       // onLoad={props.HideScrollbar}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
+      <button type="button" className="close" onClick={props.handleClick}>
+        <span aria-hidden="true">×</span>
+      </button>
       <motion.img
         className="bigImage"
         src={props.selectedImage}

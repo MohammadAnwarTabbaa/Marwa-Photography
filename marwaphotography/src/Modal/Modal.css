@@ -1,0 +1,16 @@
+.close {
+  color: white;
+  position: relative;
+  left: 90vw;
+  top: 5%;
+  font-size: 70px;
+  background: none;
+  border: none;
+}
+.close:hover {
+  color: red;
+  cursor: pointer;
+}
+.close:focus {
+  color: darkblue;
+}

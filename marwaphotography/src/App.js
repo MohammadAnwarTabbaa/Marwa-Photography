@@ -14,6 +14,7 @@ import Miscellaneous from "./Pages/Miscellaneous";
 import Urban from "./Pages/Urban";
 import AdminPanel from "./Pages/AdminPanel";
 import AdminLogin from "./component/AdminLogin/AdminLogin";
+import test from "./Pages/Teest";
 
 export class App extends Component {
   state = {
@@ -37,7 +38,7 @@ export class App extends Component {
     await this.setState({ imageId: event.target.id });
   };
   Faces = async (e) => {
-    const response = await fetch("http://localhost:3000/image/get");
+    const response = await fetch("http://localhost:3000/faces/get");
     const result = await response.json();
     // console.log(result);
     await this.setState({ Facesimages: result });
@@ -60,10 +61,8 @@ export class App extends Component {
     // this.setState({ modelImages: this.state.images });
   };
   handleClick = (e) => {
-    if (e.target.classList.contains("backdrop")) {
-      this.setState({ selectedImage: null });
-      this.ShowScrollbar();
-    }
+    this.setState({ selectedImage: null });
+    this.ShowScrollbar();
   };
 
   componentDidMount() {
@@ -103,6 +102,7 @@ export class App extends Component {
       // <Nav Faces={this.Faces} />
       <>
         <Switch>
+          <Route path="/test" component={test} />
           <Route
             exact
             path="/"
