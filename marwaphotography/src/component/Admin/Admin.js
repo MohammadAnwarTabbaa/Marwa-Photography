@@ -1,45 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import image from "../../Image/Image";
 import "./Admin.css";
 import img from "./img.png";
 
-function Admin() {
+function Admin(props) {
+  const [Cat, setCat] = useState("");
   return (
     <div className="all">
       <div className="fixedTable">
         <table>
-          <tr>
-            <th>Id</th>
-            <th>Photo</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Edit</th>
-          </tr>
+          {props.images.map((image, index) => (
+            <>
+              <tr>
+                <th>Id</th>
+                <th>Photo</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Edit</th>
+              </tr>
 
-          <tr>
-            <td className="id"> # </td>
-            <td>
-              <img className="imgThumb" id="output"></img>
-            </td>
-            <td>
-              {" "}
-              <textbox className="AdminPhotoTitle">
-                {" "}
-                I am a photo Title{" "}
-              </textbox>
-            </td>
-            <td>
-              <textbox className="adminPhotoDescription">
-                I am a description{" "}
-              </textbox>
-            </td>
-            <td>
-              {" "}
-              <button className="AdminDeleteBtn" type="button">
-                {" "}
-                Remove{" "}
-              </button>{" "}
-            </td>
-          </tr>
+              <tr>
+                <td className="id"> {image._id} </td>
+                <td>
+                  <img
+                    src={`http://localhost:3000/${props.cat}/${image.src}`}
+                    className="imgThumb"
+                    id="output"
+                  />
+                </td>
+                <td>
+                  {" "}
+                  <textbox className="AdminPhotoTitle">{image.title}</textbox>
+                </td>
+                <td>
+                  <textbox className="adminPhotoDescription">
+                    {image.description}
+                  </textbox>
+                </td>
+                <td>
+                  {" "}
+                  <button
+                    className="AdminDeleteBtn"
+                    type="button"
+                    value={props.cat}
+                    id={image.src}
+                    onClick={props.delete}
+                  >
+                    {" "}
+                    Remove{" "}
+                  </button>{" "}
+                </td>
+              </tr>
+            </>
+          ))}
         </table>
       </div>
     </div>

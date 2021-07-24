@@ -27,12 +27,52 @@ export class App extends Component {
     welcome: true,
     modelImages: [],
   };
+
+  addImage = async (e) => {
+    try {
+      const body = new FormData();
+      body.append("image", e.image);
+      const response = await fetch(
+        `http://localhost:3000/${e.cat}/post?description=${e.des}&title=${e.title}`,
+        { method: "POST", body }
+      );
+      const results = await response.json();
+      if (results.success) {
+        console.log(results.result);
+      } else {
+        this.setState({ error_message: results.message });
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  adminImages = async (e) => {
+    const facesResponse = await fetch("http://localhost:3000/faces/get");
+    const facesResult = await facesResponse.json();
+    this.setState({ Facesimages: facesResult });
+    const misceResponse = await fetch("http://localhost:3000/misce/get");
+    const misceResult = await misceResponse.json();
+    this.setState({ Miscimages: misceResult });
+    const urbanResponse = await fetch("http://localhost:3000/urban/get");
+    const urbanResult = await urbanResponse.json();
+    this.setState({ images: urbanResult });
+  };
   ShowScrollbar() {
     var style = document.createElement("style");
     style.innerHTML = `body{overflow-y:scroll;}`;
     document.head.appendChild(style);
   }
 
+  delete = async (e) => {
+    const id = e.target.id;
+    const cat = e.target.value;
+    console.log(id);
+    console.log(e.target.cat);
+    await fetch(`http://localhost:3000/${cat}/delete?imageName=${id}`, {
+      method: "DELETE",
+    });
+  };
   select = async (event) => {
     await this.setState({ selectedImage: event.target.src });
     await this.setState({ imageId: event.target.id });
@@ -160,7 +200,19 @@ export class App extends Component {
           {/* <Route path="/Main" component={Main} /> */}
           <Route path="/About" component={AboutUS} />
           <Route path="/ContactUs" component={ContactUs} />
-          <Route path="/AdminPanel" component={AdminPanel} />
+          <Route
+            path="/AdminPanel"
+            render={(props) => (
+              <AdminPanel
+                addImage={this.addImage}
+                urbanImages={this.state.images}
+                facesImages={this.state.Facesimages}
+                miscImages={this.state.Miscimages}
+                adminImages={this.adminImages}
+                delete={this.delete}
+              />
+            )}
+          />
           <Route path="/AdminLogin" component={AdminLogin} />
 
           {/* <Image select={this.state.selectedImage} images={this.state.images} />

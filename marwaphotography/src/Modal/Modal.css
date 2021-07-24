@@ -8,7 +8,7 @@
   border: none;
 }
 .close:hover {
-  color: rgba(255,0,0,0.5);
+  color: rgba(255, 0, 0, 0.5);
   cursor: pointer;
 }
 .close:focus {
