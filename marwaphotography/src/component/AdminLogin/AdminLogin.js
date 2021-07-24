@@ -9,26 +9,21 @@ function AdminLogin() {
     return (
        <div className="allLogin">
 <img className="bkg" src={bkg}></img>
-<div className="login">
-  <div className="heading">
-    <h2>Sign in</h2>
+
+  <div className="form-box">
+		<div className="header-text">
+			Welcome! 
+		</div>
+
     <form action="#">
-
-      <div className="input-group input-group-lg">
-        <span className="input-group-addon"><i className="fa fa-user"></i></span>
-        <input type="text" className="form-control" placeholder="Username or email"/>
-          </div>
-
-        <div className="input-group input-group-lg">
-          <span className="input-group-addon"><i className="fa fa-lock"></i></span>
-          <input type="password" className="form-control" placeholder="Password"/>
-        </div>
-
-        <button type="submit" className="float">Login</button>
+       <input type="text" className="form-control" placeholder="Your Email Address"/>
+        <input type="password" className="form-control" placeholder="Your Password"/>
+        <button type="submit" className="float">Sign in</button>
        </form>
  		</div>
  </div>
- </div> 
+
+
         );
     }
     

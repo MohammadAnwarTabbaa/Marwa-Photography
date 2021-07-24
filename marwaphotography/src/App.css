@@ -13,14 +13,14 @@ body {
   height: 50%;
   width: auto;
   object-fit: cover;
-  border: 1px white solid;
 }
 .img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
+  max-height: 35rem;
+  min-height: 35rem;
+  max-width: 35rem;
+  min-width: 35rem;
+  object-fit: fill;
   transition: transform 0.5s; /* Animation */
-  /* border: red 2px solid; */
 }
 
 .img:hover {
@@ -105,6 +105,9 @@ body {
   color: rgb(242, 213, 159);
 }
 
+
+
+
 .toggle-button {
   position: absolute;
   top: 1.25rem;
@@ -151,6 +154,7 @@ body {
     padding-top: 2.4rem;
     margin-right: 1.2rem;
     align-items: center;
+    
   }
   .nav {
     padding-bottom: 2%;
@@ -170,7 +174,28 @@ body {
     overflow-y: scroll;
   }
   .image-grid {
-    /* display: flex; */
+    
     margin: 1rem;
+  }
+  .bigImage {
+    max-width: 95%;
+    max-height: 95%;
+    min-width: 95%;
+    min-height: 95%;
+  }
+  .img {
+    max-height: 80%;
+    min-height: 80%;
+    max-width: 80%;
+    min-width: 80%;
+    object-fit: cover;
+    transition: transform 0.5s; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .image-grid {
+    margin-top: 10%;
   }
 }
