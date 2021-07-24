@@ -4,7 +4,7 @@ import Contact from "../component/Contact/ContactUs";
 
 function AboutUS() {
   return (
-    <div>
+    <div className="ContactBody">
       <Nav />
       <Contact />
     </div>
