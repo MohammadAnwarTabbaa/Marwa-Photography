@@ -2,50 +2,74 @@
   background-color: transparent;
 }
 
-table,
+
 th,
 td {
   color: gray;
-  border: 0.5px solid gray;
+  border-right: 0.5px solid gray;
+  border-left: 0.5px solid gray;
   border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: white;
   text-align: center;
 }
 table {
   margin: 10% 10% 1% 10%;
   width: 80%;
+  margin-top: 13%;
+  color: gray;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.1); 
+  color: white;
+  text-align: center;
+  border: 10px solid transparent;
+  border-radius:10px;
 }
 
 i {
   color: black;
   width: 20%;
 }
+th {
+  padding: 10px;
+  background-color: rgba(0,0, 0, 0.25); 
+  
+}
+td {
+  
+  padding:1%;
+}
 
 .imgThumb {
-  width: 4vw;
+  width: 10vw;
   margin-top: 3px;
+  border: 1px solid gray;
 }
 
 textarea {
   background-color: white;
+  
 }
 
 h2 {
   color: white;
   text-align: center;
   margin-bottom: -8%;
-
   margin-top: 5%;
+  font-size: 40px;
 }
 
 .AdminAddBtn,
 .AdminDeleteBtn,
 .AdminSubmitBtn {
-  border-radius: 10px;
-  background-color: white;
-  color: gray;
-  /* border: none;  */
-  width: 100px;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.5);
+ 
+  color: rgb(172, 23, 35);
+  width: 6rem;
+  height: 1.5rem;
+  border: none;
+  font-weight: bold;
 }
 
 .bkg {
@@ -60,32 +84,51 @@ h2 {
 }
 
 .AdminAddBtn {
-  margin-left: 10%;
+  margin-left: 50%;
   width: 100px;
   padding-bottom: 1px;
+  color: black;
+  margin-bottom: 4%;
+  margin-top: 4%;
+  
+  color: white;
 }
 
 .AdminSubmitBtn {
   max-width: 80%;
   padding-bottom: 1px;
   justify-self: center;
+  color: rgb(0, 127, 177);
 }
 
 #AdminForm table {
-  background-color: rgba(107, 164, 172, 0.9);
+  background-color: rgba(17, 89, 99, 0.2);
   color: black;
-  margin-top: 20px;
+  margin-top: 5rem;
 }
 
 #AdminForm table th {
-  color: rgb(48, 48, 48);
+  color: white;
 }
 
 .UploadedImg {
-  width: 100px;
-  height: 100px;
+  width: 10vw;
+  height: 20vh;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/1200px-Question_Mark.svg.png%22");
 }
+
+.adminPhotoDescription{
+  font-style: italic;
+}
+
+#real-file, #real-file2, #real-file3{
+  float: left;
+  padding: 5px;
+  margin-top: 6.5%;
+}
+
+
+
 
 @media (max-width: 600px) {
   .allTables {

@@ -8,7 +8,7 @@ body {
 }
 .allLogin {
 	background-image: url("bkg.jpg");
-  background-repeat: no-repeat;
+ 
   background-size: 100vw 100vh;
   height: 100vh;
   width: 100vw;
@@ -91,16 +91,22 @@ body {
 }
 
 
-.form-box button {
+form .float {
 	background-color: deepskyblue;
 	color: #fff;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	width: 40%;
+	width: 6rem;
+	height: 3rem;
 	font-size: 18px;
-	padding: 10px;
-	margin: 20px 0px 0px 30%;
+	padding: 12px 5px 15px 21px;
+	text-decoration: none;
+	position: absolute;
+	left: 40%;
+	top:80%;
+
+	
 }
 
 
@@ -120,16 +126,22 @@ input::placeholder {
 
 	.form-box {
 		width: 80%;
-		height: 50%;
+		height: 55%;
 	}
 	.form-box input {
-		padding: 12px;
+		padding: 10px;
 		width: 80%;
 		font-size: 15px;
-	    margin-top: -5px;
+	    margin-top: -4px;
 		
 	}
 	input::placeholder {
 		font-size: 13px;
 	  }
+	  form .float{
+		  top: 75%;
+		  height: 2.7rem;
+		  padding: 10px 6px 10px 21px;
+	  }
 }
+

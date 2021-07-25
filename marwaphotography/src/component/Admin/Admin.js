@@ -12,7 +12,7 @@ function Admin(props) {
           {props.images.map((image, index) => (
             <>
               <tr>
-                <th>Id</th>
+                {/* <th>Id</th> */}
                 <th>Photo</th>
                 <th>Title</th>
                 <th>Description</th>
@@ -20,7 +20,7 @@ function Admin(props) {
               </tr>
 
               <tr>
-                <td className="id"> {image._id} </td>
+                {/* <td className="id"> {image._id} </td> */}
                 <td>
                   <img
                     src={`http://localhost:3000/${props.cat}/${image.src}`}
