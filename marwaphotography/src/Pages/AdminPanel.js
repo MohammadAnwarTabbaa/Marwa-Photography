@@ -6,7 +6,9 @@ import Urban from "./Urban";
 
 function AdminPanel(props) {
   const [AdminToggle, setAdminToggle] = useState(false);
-  const [uploadImage, setuploadImage] = useState("#");
+  const [uploadImage, setuploadImage] = useState(
+    "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
+  );
   const [AddClose, setAddClose] = useState(false);
   const [urbanImage, setUrbanImage] = useState(null);
   const but = ["Add", "Close"];
@@ -20,7 +22,9 @@ function AdminPanel(props) {
   };
 
   const [AdminToggle2, setAdminToggle2] = useState(false);
-  const [uploadImage2, setuploadImage2] = useState("#");
+  const [uploadImage2, setuploadImage2] = useState(
+    "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
+  );
   const ImageSource2 = () => {
     const [file] = document.getElementById("real-file2").files;
     if (file) {
@@ -30,7 +34,9 @@ function AdminPanel(props) {
   };
 
   const [AdminToggle3, setAdminToggle3] = useState(false);
-  const [uploadImage3, setuploadImage3] = useState("#");
+  const [uploadImage3, setuploadImage3] = useState(
+    "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
+  );
   const ImageSource3 = () => {
     const [file] = document.getElementById("real-file3").files;
     if (file) {
@@ -46,6 +52,17 @@ function AdminPanel(props) {
     const image = e.target["urban-image"].files[0];
     const cat = "urban";
     props.addImage({ title, des, image, cat });
+
+    // alert("Please wait");
+    // if (props.successPost == true) {
+    // alert("added sucssefully");
+    e.target["urban-title"].value = "";
+    e.target["urban-Des"].value = "";
+    e.target["urban-image"].value = "";
+    setuploadImage(
+      "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
+    );
+    // }
   };
 
   const FacesSubmit = (e) => {
@@ -55,6 +72,12 @@ function AdminPanel(props) {
     const image = e.target["faces-image"].files[0];
     const cat = "faces";
     props.addImage({ title, des, image, cat });
+    e.target["faces-title"].value = "";
+    e.target["faces-Des"].value = "";
+    e.target["faces-image"].value = "";
+    setuploadImage2(
+      "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
+    );
   };
 
   const MisceSubmit = (e) => {
@@ -64,6 +87,12 @@ function AdminPanel(props) {
     const image = e.target["misce-image"].files[0];
     const cat = "misce";
     props.addImage({ title, des, image, cat });
+    e.target["misce-title"].value = "";
+    e.target["misce-Des"].value = "";
+    e.target["misce-image"].value = "";
+    setuploadImage3(
+      "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
+    );
   };
   const [UrbanShow, setUrbanShow] = useState(true);
   const [FacesShow, setFacecsShow] = useState(false);
@@ -104,7 +133,7 @@ function AdminPanel(props) {
             Faces in Objects
           </button>
           <button className="tablinks" onClick={misceShow}>
-            Misc
+            Miscellaneous
           </button>
         </div>
         {UrbanShow ? (
@@ -137,6 +166,7 @@ function AdminPanel(props) {
                           accept="image/*"
                           name="urban-image"
                           id="real-file"
+                          b
                           onChange={ImageSource}
                         />
                         <img className="UploadedImg" src={uploadImage} />

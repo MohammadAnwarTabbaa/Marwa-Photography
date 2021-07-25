@@ -195,8 +195,9 @@ body {
 }
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: transparent;
+  /* border: 1px solid black; */
+  border: none;
 }
 
 .tab button {
@@ -211,12 +212,6 @@ body {
 }
 
 .tab button:hover {
-  background-color: #ddd;
-}
-
-.tab button.active {
-  background-color: #ccc;
-}
-.link:active {
-  color: red;
+  background-color: black;
+  color: white;
 }
