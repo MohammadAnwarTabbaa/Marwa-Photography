@@ -13,7 +13,7 @@ td {
   text-align: center;
 }
 table {
-  margin: 10% 10% 1% 10%;
+  margin: 10% 10% 10% 10%;
   width: 80%;
   margin-top: 13%;
   color: gray;
@@ -23,6 +23,9 @@ table {
   text-align: center;
   border: 10px solid transparent;
   border-radius: 10px;
+}
+.fixedTable table {
+  table-layout: fixed;
 }
 
 i {
@@ -60,7 +63,7 @@ h2 {
 .AdminSubmitBtn {
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.5);
-
+  cursor: pointer;
   color: rgb(172, 23, 35);
   width: 6rem;
   height: 1.5rem;
@@ -110,7 +113,7 @@ h2 {
 .UploadedImg {
   width: 10vw;
   height: 20vh;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/1200px-Question_Mark.svg.png%22%22");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/1200px-Question_Mark.svg.png%22");
 }
 
 .adminPhotoDescription {
@@ -123,6 +126,17 @@ h2 {
   float: left;
   padding: 5px;
   margin-top: 6.5%;
+}
+
+.tab {
+  background-color: transparent;
+  /* border: 1px solid black; */
+  border: none;
+  font-size: medium;
+}
+
+.tablinks {
+  border: 1px solid black;
 }
 
 @media (max-width: 600px) {

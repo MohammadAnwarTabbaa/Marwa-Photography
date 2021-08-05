@@ -44,7 +44,7 @@ function AdminPanel(props) {
       console.log(uploadImage3);
     }
   };
-
+  const [UrbanUpload, setUrbanUpload] = useState("");
   const UrbanSubmit = (e) => {
     e.preventDefault();
     const title = e.target["urban-title"].value;
@@ -53,8 +53,6 @@ function AdminPanel(props) {
     const cat = "urban";
     props.addImage({ title, des, image, cat });
 
-    // alert("Please wait");
-    // if (props.successPost == true) {
     // alert("added sucssefully");
     e.target["urban-title"].value = "";
     e.target["urban-Des"].value = "";
@@ -62,6 +60,7 @@ function AdminPanel(props) {
     setuploadImage(
       "https://martialartsplusinc.com/wp-content/uploads/2017/04/default-image-620x600.jpg"
     );
+
     // }
   };
 
@@ -120,6 +119,10 @@ function AdminPanel(props) {
   useEffect(() => {
     setUrbanImage(props.urbanImages);
   }, []);
+
+  // useEffect(() => {
+  //   setUrbanUpload(props.delete);
+  // }, []);
 
   return (
     <div className="adminWrap" onLoad={props.adminImages}>

@@ -27,6 +27,7 @@ export class App extends Component {
     welcome: true,
     modelImages: [],
     successPost: false,
+    deletedImage: false,
   };
 
   addImage = async (e) => {
@@ -71,9 +72,15 @@ export class App extends Component {
     const cat = e.target.value;
     console.log(id);
     console.log(e.target.cat);
-    await fetch(`http://localhost:3000/${cat}/delete?imageName=${id}`, {
-      method: "DELETE",
-    });
+    const deleteImage = await fetch(
+      `http://localhost:3000/${cat}/delete?imageName=${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+    const deleteIMageResult = deleteImage.json();
+
+    this.adminImages();
   };
   select = async (event) => {
     await this.setState({ selectedImage: event.target.src });
@@ -82,10 +89,8 @@ export class App extends Component {
   Faces = async (e) => {
     const response = await fetch("http://localhost:3000/faces/get");
     const result = await response.json();
-    const sortedResult = await result.sort((a, b) => b.time - a.time);
-    // console.log(result);
-    await this.setState({ Facesimages: sortedResult });
-    await this.setState({ modelImages: sortedResult });
+    await this.setState({ Facesimages: result });
+    await this.setState({ modelImages: result });
   };
   Misc = async (e) => {
     const response = await fetch("http://localhost:3000/misce/get");
@@ -213,7 +218,7 @@ export class App extends Component {
                 miscImages={this.state.Miscimages}
                 adminImages={this.adminImages}
                 delete={this.delete}
-                successPost={this.state.successPost}
+                // successPost={this.state.successPost}
               />
             )}
           />

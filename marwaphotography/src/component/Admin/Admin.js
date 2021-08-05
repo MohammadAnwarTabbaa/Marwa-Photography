@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import image from "../../Image/Image";
 import "./Admin.css";
 import img from "./img.png";
 
 function Admin(props) {
-  const [Cat, setCat] = useState("");
   return (
     <div className="all">
       <div className="fixedTable">
